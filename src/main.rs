@@ -1,13 +1,10 @@
 fn main() {
-    let height = 190;
-    let result = if height >= 190 {
-        "Tall" // No semi-colon since it is a value being assigned to result via condition
-    }
-    else if height > 170 {
-        "Average"
-    }
-    else {
-        "Short"
-    }; // The semi-colon that comes after assigning
-    println!("{}", result);
+    let fet = 15;
+    let net = if fet == 15 {true} else {false};
+    println!("{}", net);
+    let net = false; // Changed value while being same dtype. (Shadowing)
+    println!("{}", net);
+    let net = 20;
+    println!("{}", net) // Shadowing to diff dtype value
+    // Have a good reason to shadow as it breaks code quality. Under control whern using loops.
 }
